@@ -9,6 +9,11 @@
         "typo3/cms-extbase": "^10.4 | ^11 | dev-master",
         "php": ">=7.0.0"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.windinternet.nl/typo3/repository"
+        },
     "keywords": [
         "TYPO3",
         "CMS",
