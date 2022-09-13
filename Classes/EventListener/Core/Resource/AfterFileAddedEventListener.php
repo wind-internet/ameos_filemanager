@@ -9,6 +9,8 @@ class AfterFileAddedEventListener extends AbstractFileEventListener
 {
     public function __invoke(AfterFileAddedEvent $event)
     {
-        FileUtility::add($event->getFile(), $event->getFolder());
+        if (!is_null($event->getFile()->getProperty('folder_uid'))) {
+            FileUtility::add($event->getFile(), $event->getFolder());
+        }
     }
 }
